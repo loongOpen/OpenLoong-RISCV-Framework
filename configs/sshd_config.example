@@ -1,0 +1,12 @@
+Port 22
+ListenAddress 0.0.0.0
+HostKey /data/openssh/ssh_host_ed25519_key
+PidFile /data/openssh/sshd.pid
+AuthorizedKeysFile /data/openssh/authorized_keys
+PubkeyAuthentication yes
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+PermitEmptyPasswords no
+PermitRootLogin prohibit-password
+StrictModes yes
+Subsystem sftp internal-sftp

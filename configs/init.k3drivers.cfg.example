@@ -1,0 +1,31 @@
+{
+    "jobs": [
+        {
+            "name": "boot",
+            "cmds": [
+                "start k3_driver_loader"
+            ]
+        }
+    ],
+    "services": [
+        {
+            "name": "k3_driver_loader",
+            "path": [
+                "/system/bin/sh",
+                "/data/apps/drivers/load-drivers.sh"
+            ],
+            "uid": "root",
+            "gid": [
+                "root",
+                "shell"
+            ],
+            "caps": [
+                "SYS_MODULE"
+            ],
+            "once": 1,
+            "start-mode": "condition",
+            "disabled": 1,
+            "sandbox": 0
+        }
+    ]
+}
